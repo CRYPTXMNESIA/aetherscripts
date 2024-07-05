@@ -45,7 +45,11 @@ powershell.exe -ExecutionPolicy Bypass -Command {
     }
 
     while ($true) {
-        $option = Read-Host "Enter 0 to disable Windows Defender or 1 to enable Windows Defender"
+        Write-Host "0: Windows Defender OFF"
+        Write-Host "1: Windows Defender ON"
+        Write-Host ""
+
+        $option = Read-Host ">"
 
         if ($option -eq '0') {
             Disable-WindowsDefender
